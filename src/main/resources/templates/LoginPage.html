@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Login Page</title>
+</head>
+<body>
+<h3>Login</h3>
+<form action="#"  th:action="@{/authenticate}" method="POST">
+<div th:if="${param.error}">
+<i>Invalid credentials</i></div>
+<p>
+User Name:<input type="text" name="username"/>
+</p>
+<p>
+Password:<input type="password" name="password"/>
+</p>
+<input type="submit" value="Login"/>
+</form>
+</body>
+</html>
